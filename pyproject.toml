@@ -1,7 +1,7 @@
 [project]
 name = "integrax_theme"
 authors = [
-    { name = "Na[nux[C[C[C[C[C", email = "ingo@napnxu.com"}
+    { name = "Napnux Solutions", email = "info@napnux.com"}
 ]
 description = "Integrax Theme"
 requires-python = ">=3.10"

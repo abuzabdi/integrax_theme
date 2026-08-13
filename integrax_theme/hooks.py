@@ -1,8 +1,8 @@
 app_name = "integrax_theme"
 app_title = "Integrax Theme"
-app_publisher = "Na[nux[C[C[C[C[C"
+app_publisher = "Napnux Solutions"
 app_description = "Integrax Theme"
-app_email = "ingo@napnxu.com"
+app_email = "info@napnux.com"
 app_license = "mit"
 
 # Apps
