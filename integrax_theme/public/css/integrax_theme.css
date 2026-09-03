@@ -1,0 +1,181 @@
+/* =========================================================
+   INTEGRAX — Tema oscuro para Frappe / ERPNext
+   Paleta basada en el logo: turquesa y azul marino oscuro
+   ========================================================= */
+
+:root {
+    /* --- Paleta base --- */
+    --ix-navy:         #0d1b2e;   /* azul marino muy oscuro (fondo principal) */
+    --ix-navy-light:   #16273f;   /* paneles / tarjetas */
+    --ix-navy-lighter: #223a5c;   /* bordes / hover sutil / botones secundarios */
+    --ix-teal:         #17a398;   /* turquesa del logo (acento primario) */
+    --ix-teal-hover:   #1fc3b6;
+    --ix-teal-dark:    #0f7a71;   /* variante oscura, para fondos con texto blanco encima */
+    --ix-text:         #eaf2f2;   /* texto principal sobre fondo oscuro */
+    --ix-text-muted:   #9fb3c8;   /* texto secundario */
+
+    /* --- Overrides de variables internas de Frappe (Desk) --- */
+    --primary: var(--ix-teal);
+    --primary-color: var(--ix-teal);
+    --bg-color: var(--ix-navy);
+    --fg-color: var(--ix-navy-light);
+    --text-color: var(--ix-text);
+    --text-muted: var(--ix-text-muted);
+    --card-bg: var(--ix-navy-light);
+    --border-color: var(--ix-navy-lighter);
+    --navbar-bg: var(--ix-navy);
+    --sidebar-bg: var(--ix-navy);
+}
+
+/* --- Fondo general del Desk --- */
+body.desk-app {
+    background-color: var(--ix-navy) !important;
+    color: var(--ix-text) !important;
+}
+
+/* --- Barra de navegación superior --- */
+.navbar,
+.navbar-default {
+    background-color: var(--ix-navy) !important;
+    border-bottom: 1px solid var(--ix-navy-lighter) !important;
+}
+
+/* --- Sidebar / menú lateral --- */
+.desk-sidebar,
+.standard-sidebar {
+    background-color: var(--ix-navy) !important;
+    border-right: 1px solid var(--ix-navy-lighter) !important;
+}
+
+.desk-sidebar .sidebar-item.selected,
+.desk-sidebar .sidebar-item:hover {
+    background-color: var(--ix-navy-light) !important;
+    border-left: 3px solid var(--ix-teal);
+}
+
+/* --- Tarjetas / paneles / widgets --- */
+.widget,
+.frappe-card,
+.form-page,
+.page-card {
+    background-color: var(--ix-navy-light) !important;
+    border: 1px solid var(--ix-navy-lighter) !important;
+    color: var(--ix-text) !important;
+}
+
+/* --- Botones primarios (turquesa) --- */
+.btn-primary {
+    background-color: var(--ix-teal) !important;
+    border-color: var(--ix-teal) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+}
+.btn-primary:hover {
+    background-color: var(--ix-teal-hover) !important;
+    border-color: var(--ix-teal-hover) !important;
+}
+
+/* --- Botones por defecto / secundarios / outline (incluye login) --- */
+.btn-default,
+.btn-secondary,
+.btn-outline-secondary,
+.btn-outline-primary,
+.btn.btn-default,
+a.btn,
+button.btn:not(.btn-primary):not(.btn-success):not(.btn-danger) {
+    background-color: var(--ix-navy-lighter) !important;
+    border-color: var(--ix-navy-lighter) !important;
+    color: var(--ix-text) !important;
+}
+.btn-default:hover,
+.btn-secondary:hover,
+.btn-outline-secondary:hover,
+button.btn:not(.btn-primary):not(.btn-success):not(.btn-danger):hover {
+    background-color: #2c4a73 !important;
+    color: #ffffff !important;
+}
+
+/* --- Botones deshabilitados --- */
+.btn:disabled,
+.btn.disabled,
+.btn[disabled],
+.btn[aria-disabled="true"],
+button:disabled {
+    background-color: var(--ix-navy-lighter) !important;
+    border-color: var(--ix-navy-lighter) !important;
+    color: var(--ix-text-muted) !important;
+    opacity: 1 !important;
+}
+
+/* --- Botones de éxito (usamos el mismo turquesa oscuro, ya que no hay verde en este logo) --- */
+.btn-success,
+.indicator.green {
+    background-color: var(--ix-teal-dark) !important;
+    border-color: var(--ix-teal-dark) !important;
+}
+.btn-success:hover {
+    background-color: var(--ix-teal) !important;
+}
+
+/* --- Enlaces --- */
+a {
+    color: var(--ix-teal);
+}
+a:hover {
+    color: var(--ix-teal-hover);
+}
+
+/* --- Inputs y formularios --- */
+.form-control,
+.input-with-feedback {
+    background-color: var(--ix-navy-light) !important;
+    border: 1px solid var(--ix-navy-lighter) !important;
+    color: var(--ix-text) !important;
+}
+.form-control:focus {
+    border-color: var(--ix-teal) !important;
+    box-shadow: 0 0 0 2px rgba(23, 163, 152, 0.25) !important;
+}
+
+/* --- Autocompletado del navegador (evita fondo amarillo) --- */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--ix-text) !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--ix-navy-light) inset !important;
+    box-shadow: 0 0 0px 1000px var(--ix-navy-light) inset !important;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+/* --- Tablas / listas --- */
+.list-row,
+.list-row-container {
+    border-bottom: 1px solid var(--ix-navy-lighter) !important;
+}
+.list-row:hover {
+    background-color: var(--ix-navy-light) !important;
+}
+
+/* --- Indicadores de estado (badges) --- */
+.indicator-pill.gray   { background-color: var(--ix-navy-lighter) !important; color: var(--ix-text) !important; }
+.indicator-pill.blue   { background-color: #2d6cdf !important; }
+.indicator-pill.green,
+.indicator-pill.teal   { background-color: var(--ix-teal) !important; color: #ffffff !important; }
+.indicator-pill.orange,
+.indicator-pill.yellow { background-color: #c9a227 !important; color: var(--ix-navy) !important; }
+
+/* --- Scrollbar oscuro --- */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--ix-navy);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--ix-navy-lighter);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ix-teal);
+}

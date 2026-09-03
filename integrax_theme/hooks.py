@@ -5,6 +5,12 @@ app_description = "Integrax Theme"
 app_email = "info@napnux.com"
 app_license = "mit"
 
+
+app_include_css = "/assets/integrax_theme/css/integrax_theme.css"
+web_include_css = "/assets/integrax_theme/css/integrax_theme.css"
+
+app_logo_url = "/assets/integrax_theme/images/integrax_logo.png"
+
 # Apps
 # ------------------
 
